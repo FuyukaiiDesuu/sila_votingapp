@@ -16,17 +16,26 @@ namespace sila_votingapp
         public Form2 reference { get; set; }
         int x,y;
         String file_loc;
+        String file_write_loc;
         String[] file_names;
         public Form1()
         {
             InitializeComponent();
             x = 0;
             file_loc = System.Configuration.ConfigurationManager.AppSettings["file_location"];
+            file_write_loc = System.Configuration.ConfigurationManager.AppSettings["file_write_location"];
             file_names = Directory.GetFiles(file_loc, "*.jpg");
             y = file_names.Length;
-
+            textcreater();
         }
-
+        public void textcreater()
+        {
+            if(!File.Exists(file_write_loc))
+            {
+                System.IO.File.WriteAllText(file_write_loc, "sssss");
+            }
+            
+        }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
@@ -43,6 +52,7 @@ namespace sila_votingapp
             else
             {
                 Image image = Image.FromFile(file_loc + Path.GetFileName(file_names[x]));
+                label1.Text = Path.GetFileName(file_names[x].Replace(".jpg",""));
                 this.pictureBox1.Image = image;
                 x++;
             }
