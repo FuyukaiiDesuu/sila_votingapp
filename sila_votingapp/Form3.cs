@@ -18,10 +18,9 @@ namespace sila_votingapp
         {
             InitializeComponent();
         }
-
-        private void Form3_Load(object sender, EventArgs e)
+        public void tableloader()
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\entriesdb.mdf;Integrated Security=True");
+            SqlConnection con = new SqlConnection(GetConnectionString());
             con.Open();
             SqlCommand cmd = new SqlCommand("SELECT * FROM Entries;", con);
             SqlDataAdapter ad = new SqlDataAdapter(cmd);
@@ -29,6 +28,15 @@ namespace sila_votingapp
             ad.Fill(dt);
             dataGridView1.DataSource = dt;
             con.Close();
+        }
+        public static string GetConnectionString()
+        {
+            var conStr = System.Configuration.ConfigurationManager.ConnectionStrings["entriesdbConnectionString"].ConnectionString;
+            return conStr.Replace("%APPDATA%", Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData));
+        }
+        private void Form3_Load(object sender, EventArgs e)
+        {
+            tableloader();
 
         }
 
@@ -36,6 +44,25 @@ namespace sila_votingapp
         {
             reference.Show();
             this.Dispose();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("This will purge all data from the table, proceed?", "WARNING!", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                SqlConnection con = new SqlConnection(GetConnectionString());
+                con.Open();
+                SqlCommand cmd = new SqlCommand("TRUNCATE TABLE Entries;", con);
+                cmd.ExecuteNonQuery();
+                con.Close();
+                tableloader();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                
+            }
+            
         }
     }
 }

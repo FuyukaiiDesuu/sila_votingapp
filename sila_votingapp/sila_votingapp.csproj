@@ -7,7 +7,7 @@
     <ProjectGuid>{B43DB27A-92F1-47A2-BD53-E76C90E186BA}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>sila_votingapp</RootNamespace>
-    <AssemblyName>sila_votingapp</AssemblyName>
+    <AssemblyName>SILA Voting App</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -25,7 +25,7 @@
     <ProductName>Test</ProductName>
     <PublisherName>Test</PublisherName>
     <SuiteName>Test</SuiteName>
-    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationRevision>2</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -61,6 +61,9 @@
   </PropertyGroup>
   <PropertyGroup>
     <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>original%281%29.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -114,6 +117,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -154,6 +158,28 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>entriesdb.mdf</DependentUpon>
     </Content>
+    <Content Include="original%281%29.ico" />
+    <Content Include="original.ico" />
+    <None Include="Resources\TestyExhaustedFritillarybutterfly-max-1mb.gif" />
+    <None Include="Resources\info.png" />
+    <None Include="Resources\error.png" />
+    <None Include="Resources\fast-forward-arrows%281%29.png" />
+    <None Include="Resources\play-button%284%29.png" />
+    <None Include="Resources\correct-symbol.png" />
+    <None Include="Resources\fast-forward-arrows.png" />
+    <None Include="Resources\play-button%283%29.png" />
+    <None Include="Resources\play-button%281%291.png" />
+    <None Include="Resources\play-button%282%29.png" />
+    <None Include="Resources\play-button%281%29.png" />
+    <None Include="Resources\play-button.png" />
+    <None Include="Resources\power.png" />
+    <None Include="Resources\power%281%29.png" />
+    <None Include="Resources\research.png" />
+    <None Include="Resources\power-button.png" />
+    <None Include="Resources\voter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AppDomain\CurrentDomain\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
