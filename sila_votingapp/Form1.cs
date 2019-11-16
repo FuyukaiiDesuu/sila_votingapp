@@ -21,11 +21,11 @@ namespace sila_votingapp
         int x,y = 0;
         String file_loc;
         String[] file_names;
-        public Form1()
+        public Form1(string fileloc)
         {
             InitializeComponent();
             x = 0;
-            file_loc = System.Configuration.ConfigurationManager.AppSettings["file_location"];
+            file_loc = fileloc + "\\";
             file_names = Directory.GetFiles(file_loc, "*.jpg");
             y = file_names.Length;
             inserter();
@@ -66,7 +66,7 @@ namespace sila_votingapp
                     }
                     catch (Exception ex)
                     {
-                        // MessageBox.Show(Path.GetFileName(file_names[z].Replace(".jpg", "")));
+                        throw ex;
                     }
                 }
                 MessageBox.Show("No Entries added, will proceed to create them", "ATTENTION!", MessageBoxButtons.OK, MessageBoxIcon.Information);

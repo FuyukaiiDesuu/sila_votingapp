@@ -158,8 +158,10 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>entriesdb.mdf</DependentUpon>
     </Content>
+    <Content Include="ImgFolderLoc.txt" />
     <Content Include="original%281%29.ico" />
     <Content Include="original.ico" />
+    <None Include="Resources\settings.png" />
     <None Include="Resources\TestyExhaustedFritillarybutterfly-max-1mb.gif" />
     <None Include="Resources\info.png" />
     <None Include="Resources\error.png" />

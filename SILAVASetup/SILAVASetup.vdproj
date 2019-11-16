@@ -21,7 +21,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_292B2E11BF684BDA864D2E46A7A2C635"
+        "MsmKey" = "8:_1A97C0EFD1B44FCCB44B04C122A2E126"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -33,13 +33,13 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_E35306D7BAA2459898C820F44BC4678D"
+        "MsmKey" = "8:_7479CCE3194F49B5A122F94F12E0D741"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_EC4403B9DF684B5B9C29FCA50E22C2BF"
+        "MsmKey" = "8:_E35306D7BAA2459898C820F44BC4678D"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -87,6 +87,11 @@
                     "Name" = "8:Microsoft .NET Framework 4.6.1 (x86 and x64)"
                     "ProductCode" = "8:.NETFramework,Version=v4.6.1"
                     }
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.SqlServer.SqlLocalDB.11.1"
+                    {
+                    "Name" = "8:SQL Server 2012 Express LocalDB"
+                    "ProductCode" = "8:Microsoft.SqlServer.SqlLocalDB.11.1"
+                    }
                 }
             }
         }
@@ -112,6 +117,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.6.1"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.6.1 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.6.1"
+                    }
+                }
             }
         }
     }
@@ -173,10 +186,30 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_292B2E11BF684BDA864D2E46A7A2C635"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1A97C0EFD1B44FCCB44B04C122A2E126"
             {
-            "SourcePath" = "8:..\\sila_votingapp\\entriesdb_log.ldf"
+            "SourcePath" = "8:..\\sila_votingapp\\bin\\Debug\\entriesdb_log.ldf"
             "TargetName" = "8:entriesdb_log.ldf"
+            "Tag" = "8:"
+            "Folder" = "8:_82DE380754F049D4B9A82B5D9B6F22FD"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7479CCE3194F49B5A122F94F12E0D741"
+            {
+            "SourcePath" = "8:..\\sila_votingapp\\bin\\Debug\\entriesdb.mdf"
+            "TargetName" = "8:entriesdb.mdf"
             "Tag" = "8:"
             "Folder" = "8:_82DE380754F049D4B9A82B5D9B6F22FD"
             "Condition" = "8:"
@@ -199,26 +232,6 @@
             "TargetName" = "8:original(1).ico"
             "Tag" = "8:"
             "Folder" = "8:_40D9DC8B6F2147308F1480E1D02812AF"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_EC4403B9DF684B5B9C29FCA50E22C2BF"
-            {
-            "SourcePath" = "8:..\\sila_votingapp\\entriesdb.mdf"
-            "TargetName" = "8:entriesdb.mdf"
-            "Tag" = "8:"
-            "Folder" = "8:_82DE380754F049D4B9A82B5D9B6F22FD"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -301,7 +314,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:SILA Voting App"
         "ProductCode" = "8:{B52F98FF-12AD-4231-8888-4880A43B0A4D}"
-        "PackageCode" = "8:{9C03D59B-1A61-42C1-BA08-837AD6E0C5DE}"
+        "PackageCode" = "8:{461FD653-444A-4F5B-80C0-482DAF4C6C34}"
         "UpgradeCode" = "8:{73BD5AC2-328D-4182-8555-AFD8478087E5}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
