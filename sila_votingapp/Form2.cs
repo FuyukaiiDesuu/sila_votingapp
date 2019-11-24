@@ -29,7 +29,7 @@ namespace sila_votingapp
             System.IO.Directory.CreateDirectory(appdatastring);
             if (!File.Exists(appdatastring + "\\imgfileloc.txt"))
             {
-                FileInfo f = new FileInfo(appdatastring + "\\imgfileloc.txt"):
+                FileInfo f = new FileInfo(appdatastring + "\\imgfileloc.txt");
                 File.Create(appdatastring + "\\imgfileloc.txt").Dispose();
                 File.WriteAllText(appdatastring + "\\imgfileloc.txt", "null");
             }

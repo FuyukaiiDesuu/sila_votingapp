@@ -75,18 +75,13 @@
         "InstallerBootstrapper" = "3:2"
             "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
             {
-            "Enabled" = "11:TRUE"
+            "Enabled" = "11:FALSE"
             "PromptEnabled" = "11:TRUE"
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
                 "Items"
                 {
-                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.6.1"
-                    {
-                    "Name" = "8:Microsoft .NET Framework 4.6.1 (x86 and x64)"
-                    "ProductCode" = "8:.NETFramework,Version=v4.6.1"
-                    }
                     "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.SqlServer.SqlLocalDB.11.1"
                     {
                     "Name" = "8:SQL Server 2012 Express LocalDB"
@@ -314,7 +309,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:SILA Voting App"
         "ProductCode" = "8:{B52F98FF-12AD-4231-8888-4880A43B0A4D}"
-        "PackageCode" = "8:{461FD653-444A-4F5B-80C0-482DAF4C6C34}"
+        "PackageCode" = "8:{45205C86-04FE-46E3-9CF4-3F17C4DCC303}"
         "UpgradeCode" = "8:{73BD5AC2-328D-4182-8555-AFD8478087E5}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
